@@ -16,4 +16,13 @@ first10 = [1..10]
 
 double10 = map (\x -> x * 2) first10
 
+times4 :: Int -> Int
+times4 x  = x * 4
+
+listTimes4 = map times4 [10..20]
+
+-- creating map from scratch.
+multBy4 :: [Int] -> [Int]
+multBy4 [] = []
+multBy4 (x:xs) = times4 x : multBy4 xs
 
